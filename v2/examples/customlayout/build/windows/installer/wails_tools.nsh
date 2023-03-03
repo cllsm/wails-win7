@@ -56,7 +56,7 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
     !endif
 !endif
 
-!macro my.checkProgramRunWindow
+!macro wails.checkProgramRunWindow
     StrCpy $1 "${PRODUCT_EXECUTABLE}"
 
     nsProcessW::_FindProcess "$1"
