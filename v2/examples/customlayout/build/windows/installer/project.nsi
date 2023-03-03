@@ -74,6 +74,7 @@ ShowInstDetails show # This will always show the installation details.
 
 Function .onInit
    !insertmacro wails.checkArchitecture
+   !insertmacro my.checkProgramRunWindow
 FunctionEnd
 
 Section

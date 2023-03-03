@@ -3,6 +3,7 @@
 !include "x64.nsh"
 !include "WinVer.nsh"
 !include "FileFunc.nsh"
+!include "Logiclib.nsh"
 
 !ifndef INFO_PROJECTNAME
     !define INFO_PROJECTNAME "{{.Name}}"
@@ -55,6 +56,19 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
     !endif
 !endif
 
+!macro my.checkProgramRunWindow
+    StrCpy $1 "${PRODUCT_EXECUTABLE}"
+
+    nsProcessW::_FindProcess "$1"
+    Pop $R0
+    ${If} $R0 = 0
+      nsProcessW::_KillProcess "$1"
+      Pop $R0
+
+      Sleep 500
+    ${EndIf}
+!macroend
+
 !macro wails.checkArchitecture
     !ifndef WAILS_WIN10_REQUIRED
         !define WAILS_WIN10_REQUIRED "This product is only supported on Windows 10 (Server 2016) and later."
@@ -64,7 +78,7 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
         !define WAILS_ARCHITECTURE_NOT_SUPPORTED "This product can't be installed on the current Windows architecture. Supports: ${ARCH}"
     !endif
 
-    ${If} ${AtLeastWin10}
+    ${If} ${AtLeastWin7}
         !ifdef SUPPORTS_AMD64
             ${if} ${IsNativeAMD64}
                 Goto ok
