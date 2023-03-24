@@ -22,7 +22,7 @@ const (
 	nsisWebView2SetupFile = "tmp/MicrosoftEdgeWebview2Setup.exe"
 )
 
-func GenerateNSISInstaller(options *Options, amd64Binary string, arm64Binary string) error {
+func GenerateNSISInstaller(options *Options, amd64Binary string, arm64Binary string, win32Binary string) error {
 	outputLogger := options.Logger
 	outputLogger.Println("Creating NSIS installer\n------------------------------")
 
@@ -56,7 +56,7 @@ func GenerateNSISInstaller(options *Options, amd64Binary string, arm64Binary str
 	}
 
 	nsisType := options.ProjectData.NSISType
-	if nsisType == nsisTypeSingle && (amd64Binary == "" || arm64Binary == "") {
+	if nsisType == nsisTypeSingle && (amd64Binary == "" || arm64Binary == "" || win32Binary == "") {
 		nsisType = ""
 	}
 
@@ -65,19 +65,25 @@ func GenerateNSISInstaller(options *Options, amd64Binary string, arm64Binary str
 		fallthrough
 	case nsisTypeMultiple:
 		if amd64Binary != "" {
-			if err := makeNSIS(options, "amd64", amd64Binary, ""); err != nil {
+			if err := makeNSIS(options, "amd64", amd64Binary, "", ""); err != nil {
 				return err
 			}
 		}
 
 		if arm64Binary != "" {
-			if err := makeNSIS(options, "arm64", "", arm64Binary); err != nil {
+			if err := makeNSIS(options, "arm64", "", arm64Binary, ""); err != nil {
+				return err
+			}
+		}
+
+		if win32Binary != "" {
+			if err := makeNSIS(options, "win32", "", "", win32Binary); err != nil {
 				return err
 			}
 		}
 
 	case nsisTypeSingle:
-		if err := makeNSIS(options, "single", amd64Binary, arm64Binary); err != nil {
+		if err := makeNSIS(options, "single", amd64Binary, arm64Binary, win32Binary); err != nil {
 			return err
 		}
 	default:
@@ -87,7 +93,7 @@ func GenerateNSISInstaller(options *Options, amd64Binary string, arm64Binary str
 	return nil
 }
 
-func makeNSIS(options *Options, installerKind string, amd64Binary string, arm64Binary string) error {
+func makeNSIS(options *Options, installerKind string, amd64Binary string, arm64Binary string, win32Binary string) error {
 	verbose := options.Verbosity == VERBOSE
 	outputLogger := options.Logger
 
@@ -98,6 +104,9 @@ func makeNSIS(options *Options, installerKind string, amd64Binary string, arm64B
 	}
 	if arm64Binary != "" {
 		args = append(args, "-DARG_WAILS_ARM64_BINARY="+arm64Binary)
+	}
+	if win32Binary != "" {
+		args = append(args, "-DARG_WAILS_386_BINARY="+win32Binary)
 	}
 	args = append(args, nsisProjectFile)
 

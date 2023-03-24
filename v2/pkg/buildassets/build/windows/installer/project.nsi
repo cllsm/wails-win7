@@ -14,8 +14,10 @@ Unicode true
 ## > makensis -DARG_WAILS_AMD64_BINARY=..\..\bin\app.exe
 ## For a ARM64 only installer:
 ## > makensis -DARG_WAILS_ARM64_BINARY=..\..\bin\app.exe
+## For a Win32 only installer:
+## > makensis -DARG_WAILS_386_BINARY=..\..\bin\app.exe
 ## For a installer with both architectures:
-## > makensis -DARG_WAILS_AMD64_BINARY=..\..\bin\app-amd64.exe -DARG_WAILS_ARM64_BINARY=..\..\bin\app-arm64.exe
+## > makensis -DARG_WAILS_AMD64_BINARY=..\..\bin\app-amd64.exe -DARG_WAILS_ARM64_BINARY=..\..\bin\app-arm64.exe -DARG_WAILS_386_BINARY=..\..\bin\app-win32.exe
 ####
 ## The following information is taken from the ProjectInfo file, but they can be overwritten here. 
 ####
@@ -74,6 +76,7 @@ ShowInstDetails show # This will always show the installation details.
 
 Function .onInit
    !insertmacro wails.checkArchitecture
+   !insertmacro wails.checkProgramRunWindow
 FunctionEnd
 
 Section

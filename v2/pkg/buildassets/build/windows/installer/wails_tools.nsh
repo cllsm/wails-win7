@@ -41,6 +41,10 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
     !define SUPPORTS_ARM64
 !endif
 
+!ifdef ARG_WAILS_386_BINARY
+    !define SUPPORTS_386
+!endif
+
 !ifdef SUPPORTS_AMD64
     !ifdef SUPPORTS_ARM64
         !define ARCH "amd64_arm64"
@@ -51,13 +55,34 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
     !ifdef SUPPORTS_ARM64
         !define ARCH "arm64"
     !else
-        !error "Wails: Undefined ARCH, please provide at least one of ARG_WAILS_AMD64_BINARY or ARG_WAILS_ARM64_BINARY"
+        !ifdef SUPPORTS_386
+            !define ARCH "win32"
+        !else
+            !error "Wails: Undefined ARCH, please provide at least one of ARG_WAILS_AMD64_BINARY or ARG_WAILS_ARM64_BINARY or ARG_WAILS_386_BINARY"
+        !endif
     !endif
 !endif
+
+!macro wails.checkProgramRunWindow
+    StrCpy $1 "${PRODUCT_EXECUTABLE}"
+
+    nsProcessW::_FindProcess "$1"
+    Pop $R0
+    ${If} $R0 = 0
+      nsProcessW::_KillProcess "$1"
+      Pop $R0
+
+      Sleep 500
+    ${EndIf}
+!macroend
 
 !macro wails.checkArchitecture
     !ifndef WAILS_WIN10_REQUIRED
         !define WAILS_WIN10_REQUIRED "This product is only supported on Windows 10 (Server 2016) and later."
+    !endif
+
+    !ifndef WAILS_WIN7_REQUIRED
+        !define WAILS_WIN7_REQUIRED "This product is only supported on Windows 7 (Server 2008) and later."
     !endif
 
     !ifndef WAILS_ARCHITECTURE_NOT_SUPPORTED
@@ -84,13 +109,17 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
         notSilentArch:
             MessageBox MB_OK "${WAILS_ARCHITECTURE_NOT_SUPPORTED}"
             Quit
+    ${EndIf}
+
+    ${If} ${AtLeastWin7}
+        Goto ok
     ${else}
         IfSilent silentWin notSilentWin
         silentWin:
             SetErrorLevel 64
             Abort
         notSilentWin:
-            MessageBox MB_OK "${WAILS_WIN10_REQUIRED}"
+            MessageBox MB_OK "${WAILS_WIN7_REQUIRED}"
             Quit
     ${EndIf}
 
@@ -108,6 +137,10 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
         ${if} ${IsNativeARM64}
             File "/oname=${PRODUCT_EXECUTABLE}" "${ARG_WAILS_ARM64_BINARY}"
         ${EndIf}
+    !endif
+
+    !ifdef SUPPORTS_386
+        File "/oname=${PRODUCT_EXECUTABLE}" "${ARG_WAILS_386_BINARY}"
     !endif
 !macroend
 
