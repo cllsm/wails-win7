@@ -3,6 +3,7 @@
 !include "x64.nsh"
 !include "WinVer.nsh"
 !include "FileFunc.nsh"
+!include "Logiclib.nsh"
 
 !ifndef INFO_PROJECTNAME
     !define INFO_PROJECTNAME "{{.Name}}"
