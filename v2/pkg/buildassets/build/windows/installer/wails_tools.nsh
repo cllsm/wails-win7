@@ -103,13 +103,9 @@ RequestExecutionLevel "${REQUEST_EXECUTION_LEVEL}"
             ${EndIf}
         !endif
 
-        IfSilent silentArch notSilentArch
-        silentArch:
-            SetErrorLevel 65
-            Abort
-        notSilentArch:
-            MessageBox MB_OK "${WAILS_ARCHITECTURE_NOT_SUPPORTED}"
-            Quit
+        !ifdef SUPPORTS_386
+            Goto ok
+        !endif
     ${EndIf}
 
     ${If} ${AtLeastWin7}
