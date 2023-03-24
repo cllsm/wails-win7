@@ -244,7 +244,7 @@ func buildApplication(f *flags.Build) error {
 		amd64Binary := outputBinaries["windows/amd64"]
 		arm64Binary := outputBinaries["windows/arm64"]
 		win32Binary := outputBinaries["windows/386"]
-		if amd64Binary == "" && arm64Binary == "" {
+		if amd64Binary == "" && arm64Binary == "" && win32Binary == "" {
 			return fmt.Errorf("cannot build nsis installer - no windows targets")
 		}
 
