@@ -77,6 +77,23 @@ ShowInstDetails show # This will always show the installation details.
 Function .onInit
    !insertmacro wails.checkArchitecture
    !insertmacro wails.checkProgramRunWindow
+   ${If} ${REQUEST_EXECUTION_LEVEL} == "admin"
+       SetShellVarContext all
+   ${else}
+       SetShellVarContext current
+   ${EndIf}
+   RMDir /r "$AppData\${PRODUCT_EXECUTABLE}" # Remove the WebView2 DataPath
+
+   RMDir /r $INSTDIR
+
+   Delete "$SMPROGRAMS\${INFO_PRODUCTNAME}.lnk"
+   Delete "$DESKTOP\${INFO_PRODUCTNAME}.lnk"
+FunctionEnd
+
+Function .onInstSuccess
+
+  ExecShell "" "$INSTDIR\${PRODUCT_NAME}.exe"
+
 FunctionEnd
 
 Section
