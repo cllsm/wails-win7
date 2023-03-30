@@ -55,6 +55,11 @@ VIAddVersionKey "ProductName"     "${INFO_PRODUCTNAME}"
 !define MUI_FINISHPAGE_NOAUTOCLOSE # Wait on the INSTFILES page so the user can take a look into the details of the installation steps
 !define MUI_ABORTWARNING # This will warn the user if they exit from the installer.
 
+;定义安装界面
+!define MUI_FINISHPAGE_RUN
+;安装函数定义
+!define MUI_FINISHPAGE_RUN_FUNCTION "LaunchLink"
+
 !insertmacro MUI_PAGE_WELCOME # Welcome to the installer page.
 # !insertmacro MUI_PAGE_LICENSE "resources\eula.txt" # Adds a EULA page to the installer
 !insertmacro MUI_PAGE_DIRECTORY # In which folder install page.
@@ -63,7 +68,7 @@ VIAddVersionKey "ProductName"     "${INFO_PRODUCTNAME}"
 
 !insertmacro MUI_UNPAGE_INSTFILES # Uinstalling page
 
-!insertmacro MUI_LANGUAGE "English" # Set the Language of the installer
+!insertmacro MUI_LANGUAGE "SimpChinese" # Set the Language of the installer
 
 ## The following two statements can be used to sign the installer and the uninstaller. The path to the binaries are provided in %1
 #!uninstfinalize 'signtool --file "%1"'
@@ -77,24 +82,16 @@ ShowInstDetails show # This will always show the installation details.
 Function .onInit
    !insertmacro wails.checkArchitecture
    !insertmacro wails.checkProgramRunWindow
-   ${If} ${REQUEST_EXECUTION_LEVEL} == "admin"
-       SetShellVarContext all
-   ${else}
-       SetShellVarContext current
-   ${EndIf}
+   !insertmacro wails.setShellContext
+   SetShellVarContext current
+   Delete "$AppData\${PRODUCT_EXECUTABLE}\*.*"
    RMDir /r "$AppData\${PRODUCT_EXECUTABLE}" # Remove the WebView2 DataPath
-
    RMDir /r $INSTDIR
 
    Delete "$SMPROGRAMS\${INFO_PRODUCTNAME}.lnk"
    Delete "$DESKTOP\${INFO_PRODUCTNAME}.lnk"
 FunctionEnd
 
-Function .onInstSuccess
-
-  ExecShell "" "$INSTDIR\${PRODUCT_NAME}.exe"
-
-FunctionEnd
 
 Section
     !insertmacro wails.setShellContext
@@ -102,7 +99,7 @@ Section
     !insertmacro wails.webview2runtime
 
     SetOutPath $INSTDIR
-    
+
     !insertmacro wails.files
 
     CreateShortcut "$SMPROGRAMS\${INFO_PRODUCTNAME}.lnk" "$INSTDIR\${PRODUCT_EXECUTABLE}"
@@ -111,11 +108,11 @@ Section
     !insertmacro wails.writeUninstaller
 SectionEnd
 
-Section "uninstall" 
+Section "uninstall"
     !insertmacro wails.setShellContext
-
+    SetShellVarContext current
+    Delete "$AppData\${PRODUCT_EXECUTABLE}\*.*"
     RMDir /r "$AppData\${PRODUCT_EXECUTABLE}" # Remove the WebView2 DataPath
-
     RMDir /r $INSTDIR
 
     Delete "$SMPROGRAMS\${INFO_PRODUCTNAME}.lnk"
@@ -123,3 +120,7 @@ Section "uninstall"
 
     !insertmacro wails.deleteUninstaller
 SectionEnd
+;function要写字section之后
+Function LaunchLink
+     ExecShell "" "$INSTDIR\${INFO_PRODUCTNAME}.exe"
+FunctionEnd
