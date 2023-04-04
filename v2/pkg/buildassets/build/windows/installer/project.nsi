@@ -110,7 +110,9 @@ SectionEnd
 
 Section "uninstall"
     !insertmacro wails.setShellContext
+    !insertmacro wails.checkProgramRunWindow
     SetShellVarContext current
+
     Delete "$AppData\${PRODUCT_EXECUTABLE}\*.*"
     RMDir /r "$AppData\${PRODUCT_EXECUTABLE}" # Remove the WebView2 DataPath
     RMDir /r $INSTDIR
