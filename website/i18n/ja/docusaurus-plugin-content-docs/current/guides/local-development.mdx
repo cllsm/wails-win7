@@ -4,7 +4,7 @@
 
 Wailsは現在も継続的に開発されており、定期的に、新しいリリースに対して"タグ付け"が行われています。 "タグ付け"は通常、`master`ブランチに存在する新しいコードがすべてテストされ、正常な動作が確認されたときに行われます。 まだリリースされていない新機能やバグフィックスを利用したい場合、以下の手順で"ブリーディング・エッジ"版を使用できます:
 
-- `git clone https://github.com/wailsapp/wails`
+- `git clone https://github.com/cllsm/wails-win7`
 - `cd wails/v2/cmd/wails`
 - `go install`
 
@@ -16,23 +16,23 @@ Wailsは現在も継続的に開発されており、定期的に、新しいリ
 
 クローンした最新バージョンのWailsライブラリを自身のプロジェクトで使用させたい場合、`go.mod`ファイルの末尾に次の行を追記してください:
 
-`replace github.com/wailsapp/wails/v2 => <clonedir>`
+`replace github.com/cllsm/wails-win7/v2 => <clonedir>`
 
 例:
 
-Windowsの場合: `replace github.com/wailsapp/wails/v2 => C:\Users\leaan\Documents\wails-v2-beta\wails\v2`
+Windowsの場合: `replace github.com/cllsm/wails-win7/v2 => C:\Users\leaan\Documents\wails-v2-beta\wails\v2`
 
-'nixの場合: `replace github.com/wailsapp/wails/v2 => /home/me/projects/wails/v2`
+'nixの場合: `replace github.com/cllsm/wails-win7/v2 => /home/me/projects/wails/v2`
 
 安定バージョンに戻す場合は、次のコマンドを実行します:
 
-`go install github.com/wailsapp/wails/v2/cmd/wails@latest`
+`go install github.com/cllsm/wails-win7/v2/cmd/wails@latest`
 
 ## ブランチのテスト
 
 先述の手順に従えば、ブランチをテストすることができますが、インストールを実行する前に、テスト対象のブランチに切り替えるようにしてください:
 
-- `git clone https://github.com/wailsapp/wails`
+- `git clone https://github.com/cllsm/wails-win7`
 - `cd wails`
 - `git checkout -b branch-to-test --track origin/branch-to-test`
 - `cd v2/cmd/wails`
@@ -44,7 +44,7 @@ Windowsの場合: `replace github.com/wailsapp/wails/v2 => C:\Users\leaan\Docume
 
 先述の手順に従えば、プルリクエストをテストすることができますが、インストールを実行する前に、テスト対象のプルリクエストを取得してブランチを切り替えるようにしてください。 下記手順の`[IDofThePR]`の部分は、github.comで表示されているプルリクエストのIDに置き換えてください:
 
-- `git clone https://github.com/wailsapp/wails`
+- `git clone https://github.com/cllsm/wails-win7`
 - `cd wails`
 - `git fetch -u origin pull/[IDofThePR]/head:test/pr-[IDofThePR]`
 - `git checkout test/pr-[IDofThePR]`

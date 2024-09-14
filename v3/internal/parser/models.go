@@ -50,7 +50,7 @@ func GenerateModels(models map[packagePath]map[structName]*StructDef) (string, e
 	var buffer bytes.Buffer
 	buffer.WriteString(modelsHeader)
 
-	// sort pkgs by alias (e.g. services) instead of full pkg name (e.g. github.com/wailsapp/wails/somedir/services)
+	// sort pkgs by alias (e.g. services) instead of full pkg name (e.g. github.com/cllsm/wails-win7/somedir/services)
 	// and then sort resulting list by the alias
 	var keys []string
 	for pkg, _ := range models {

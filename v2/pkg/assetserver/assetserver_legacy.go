@@ -4,7 +4,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/wailsapp/wails/v2/pkg/assetserver/webview"
+	"github.com/cllsm/wails-win7/v2/pkg/assetserver/webview"
 )
 
 // ProcessHTTPRequest processes the HTTP Request by faking a golang HTTP Server.

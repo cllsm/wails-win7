@@ -1,4 +1,4 @@
-module github.com/wailsapp/wails/v3
+module github.com/cllsm/wails-win7/v3
 
 go 1.19
 
@@ -16,7 +16,7 @@ require (
 	github.com/pterm/pterm v0.12.51
 	github.com/samber/lo v1.37.0
 	github.com/tc-hib/winres v0.1.6
-	github.com/wailsapp/wails/v2 v2.3.2-0.20230117193915-45c3a501d9e6
+	github.com/cllsm/wails-win7/v2 v2.3.2-0.20230117193915-45c3a501d9e6
 	modernc.org/sqlite v1.21.0
 )
 
@@ -71,4 +71,4 @@ require (
 	mvdan.cc/sh/v3 v3.6.0 // indirect
 )
 
-replace github.com/wailsapp/wails/v2 => ../v2
+replace github.com/cllsm/wails-win7/v2 => ../v2

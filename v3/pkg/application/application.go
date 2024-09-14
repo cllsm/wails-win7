@@ -9,13 +9,13 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/wailsapp/wails/v2/pkg/assetserver"
-	"github.com/wailsapp/wails/v2/pkg/assetserver/webview"
-	assetserveroptions "github.com/wailsapp/wails/v2/pkg/options/assetserver"
+	"github.com/cllsm/wails-win7/v2/pkg/assetserver"
+	"github.com/cllsm/wails-win7/v2/pkg/assetserver/webview"
+	assetserveroptions "github.com/cllsm/wails-win7/v2/pkg/options/assetserver"
 
-	wailsruntime "github.com/wailsapp/wails/v3/internal/runtime"
-	"github.com/wailsapp/wails/v3/pkg/events"
-	"github.com/wailsapp/wails/v3/pkg/logger"
+	wailsruntime "github.com/cllsm/wails-win7/v3/internal/runtime"
+	"github.com/cllsm/wails-win7/v3/pkg/events"
+	"github.com/cllsm/wails-win7/v3/pkg/logger"
 )
 
 var globalApplication *App

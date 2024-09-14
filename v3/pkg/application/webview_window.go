@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wailsapp/wails/v3/pkg/logger"
+	"github.com/cllsm/wails-win7/v3/pkg/logger"
 
-	"github.com/wailsapp/wails/v3/pkg/events"
+	"github.com/cllsm/wails-win7/v3/pkg/events"
 )
 
 type (

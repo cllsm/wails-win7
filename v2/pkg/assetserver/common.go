@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/wailsapp/wails/v2/pkg/options"
-	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
+	"github.com/cllsm/wails-win7/v2/pkg/options"
+	"github.com/cllsm/wails-win7/v2/pkg/options/assetserver"
 	"golang.org/x/net/html"
 )
 

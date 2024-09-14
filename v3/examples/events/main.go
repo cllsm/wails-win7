@@ -6,8 +6,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/events"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/pkg/events"
 )
 
 //go:embed assets

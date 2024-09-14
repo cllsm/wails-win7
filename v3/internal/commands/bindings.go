@@ -1,6 +1,6 @@
 package commands
 
-import "github.com/wailsapp/wails/v3/internal/parser"
+import "github.com/cllsm/wails-win7/v3/internal/parser"
 
 type GenerateBindingsOptions struct {
 	Silent           bool   `name:"silent" description:"Silent mode"`

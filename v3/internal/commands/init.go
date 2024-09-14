@@ -2,8 +2,8 @@ package commands
 
 import (
 	"fmt"
-	"github.com/wailsapp/wails/v3/internal/flags"
-	"github.com/wailsapp/wails/v3/internal/templates"
+	"github.com/cllsm/wails-win7/v3/internal/flags"
+	"github.com/cllsm/wails-win7/v3/internal/templates"
 
 	"github.com/pterm/pterm"
 )

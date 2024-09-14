@@ -11,7 +11,7 @@ import (
 
 	"github.com/pkg/browser"
 
-	"github.com/wailsapp/wails/cmd"
+	"github.com/cllsm/wails-win7/cmd"
 )
 
 func init() {
@@ -115,7 +115,7 @@ To help you in this process, we will ask for some information, add Go/Wails deta
 		template, _ := io.ReadAll(resp.Body)
 		body := string(template)
 		body = "**Description**\n" + (strings.Split(body, "**Description**")[1])
-		fullURL := "https://github.com/wailsapp/wails/issues/new?"
+		fullURL := "https://github.com/cllsm/wails-win7/issues/new?"
 		body = strings.Replace(body, "A clear and concise description of what the bug is.", description, -1)
 		body = strings.Replace(body, "Please provide your platform, GO version and variables, etc", str.String(), -1)
 		params := "title=" + title + "&body=" + body

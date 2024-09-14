@@ -30,7 +30,7 @@ static void fix_signal(int signum)
 fix_signal_error:
         fprintf(stderr, "error fixing handler for signal %d, please "
                 "report this issue to "
-                "https://github.com/wailsapp/wails: %s\n",
+                "https://github.com/cllsm/wails-win7: %s\n",
                 signum, strerror(errno));
 }
 
@@ -85,14 +85,14 @@ import (
 	"text/template"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/pkg/assetserver"
-	"github.com/wailsapp/wails/v2/pkg/assetserver/webview"
+	"github.com/cllsm/wails-win7/v2/pkg/assetserver"
+	"github.com/cllsm/wails-win7/v2/pkg/assetserver/webview"
 
-	"github.com/wailsapp/wails/v2/internal/binding"
-	"github.com/wailsapp/wails/v2/internal/frontend"
-	wailsruntime "github.com/wailsapp/wails/v2/internal/frontend/runtime"
-	"github.com/wailsapp/wails/v2/internal/logger"
-	"github.com/wailsapp/wails/v2/pkg/options"
+	"github.com/cllsm/wails-win7/v2/internal/binding"
+	"github.com/cllsm/wails-win7/v2/internal/frontend"
+	wailsruntime "github.com/cllsm/wails-win7/v2/internal/frontend/runtime"
+	"github.com/cllsm/wails-win7/v2/internal/logger"
+	"github.com/cllsm/wails-win7/v2/pkg/options"
 )
 
 const startURL = "wails://wails/"

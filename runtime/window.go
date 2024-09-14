@@ -5,7 +5,7 @@ import (
 	"runtime"
 
 	"github.com/abadojack/whatlanggo"
-	"github.com/wailsapp/wails/lib/interfaces"
+	"github.com/cllsm/wails-win7/lib/interfaces"
 	"golang.org/x/text/encoding"
 	"golang.org/x/text/encoding/japanese"
 	"golang.org/x/text/encoding/korean"

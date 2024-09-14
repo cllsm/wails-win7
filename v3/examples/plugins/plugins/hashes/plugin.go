@@ -6,7 +6,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
 )
 
 // ---------------- Plugin Setup ----------------

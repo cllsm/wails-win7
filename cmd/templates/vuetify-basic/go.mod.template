@@ -1,5 +1,5 @@
 module {{.BinaryName}}
 
 require (
-	github.com/wailsapp/wails {{.WailsVersion}}
+	github.com/cllsm/wails-win7 {{.WailsVersion}}
 )

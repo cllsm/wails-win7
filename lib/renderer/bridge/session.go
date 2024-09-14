@@ -3,11 +3,11 @@ package renderer
 import (
 	"time"
 
-	"github.com/wailsapp/wails/runtime"
+	"github.com/cllsm/wails-win7/runtime"
 
 	"github.com/gorilla/websocket"
-	"github.com/wailsapp/wails/lib/interfaces"
-	"github.com/wailsapp/wails/lib/logger"
+	"github.com/cllsm/wails-win7/lib/interfaces"
+	"github.com/cllsm/wails-win7/lib/logger"
 )
 
 // TODO Move this back into bridge.go

@@ -29,7 +29,7 @@ var assets embed.FS
 </dict>
 ```
 
-参考: https://github.com/wailsapp/wails/issues/1504#issuecomment-1174317433
+参考: https://github.com/cllsm/wails-win7/issues/1504#issuecomment-1174317433
 
 ## Macのアプリケーションが無効になっています
 
@@ -86,14 +86,14 @@ window.go.main.App.TestFunc(msg, args)
   });
 ```
 
-出典: https://github.com/wailsapp/wails/issues/1186
+出典: https://github.com/cllsm/wails-win7/issues/1186
 
 ## Wailsのインストール時にプロキシエラーが発生します
 
 次のようなエラーが発生する場合:
 
 ```
-"https://proxy.golang.org/github.com/wailsapp/wails/cmd/wails/@v/list": dial tcp 172.217.163.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+"https://proxy.golang.org/github.com/cllsm/wails-win7/cmd/wails/@v/list": dial tcp 172.217.163.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
 ```
 
 おそらく、公式のGo Proxyがブロックされています (中国のユーザより報告されています)。 解決するには、次のように、プロキシを手動で設定します:
@@ -103,7 +103,7 @@ go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
-出典: https://github.com/wailsapp/wails/issues/1233
+出典: https://github.com/cllsm/wails-win7/issues/1233
 
 ## 生成されたTypeScriptの型定義が正しくありません
 
@@ -120,21 +120,21 @@ go env -w GOPROXY=https://goproxy.cn,direct
 </head>
 ```
 
-出典: https://github.com/wailsapp/wails/discussions/1512
+出典: https://github.com/cllsm/wails-win7/discussions/1512
 
 ## Macで`wails dev`を実行すると`too many open files`エラーが発生します
 
 デフォルトでは、macOSは最大で256個のファイルしか開くことができません。 この制限により、`wails dev`コマンド実行時に影響が発生する場合があります。 この制限は、ターミナルで次のようなコマンドを実行することで、緩和することができます: `ulimit -n 1024`。
 
-FSNotifyは、Macのために、[Appleのfseventsへの移行を検討しています](https://github.com/fsnotify/fsnotify/issues/11)。 この移行が完了しない間は、[こちら](https://github.com/wailsapp/wails/issues/1733)で言及されているように、独自で実装を行います。
+FSNotifyは、Macのために、[Appleのfseventsへの移行を検討しています](https://github.com/fsnotify/fsnotify/issues/11)。 この移行が完了しない間は、[こちら](https://github.com/cllsm/wails-win7/issues/1733)で言及されているように、独自で実装を行います。
 
 ## Macアプリで不可解なコンパイルエラーが発生します
 
 一部のユーザより、次のようなコンパイルエラーが発生することがあるという報告を受けています:
 
 ```shell
-# github.com/wailsapp/wails/v2/internal/frontend/desktop/darwin
-In file included from ../../pkg/mod/github.com/wailsapp/wails/v2@v2.0.0-beta.44.2/internal/frontend/desktop/darwin/callbacks.go:9:
+# github.com/cllsm/wails-win7/v2/internal/frontend/desktop/darwin
+In file included from ../../pkg/mod/github.com/cllsm/wails-win7/v2@v2.0.0-beta.44.2/internal/frontend/desktop/darwin/callbacks.go:9:
 In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:12:
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSBundle.h:91:143: error: function does not return NSString
 - (NSAttributedString *)localizedAttributedStringForKey:(NSString *)key value:(nullable NSString *)value table:(nullable NSString *)tableName NS_FORMAT_ARGUMENT(1) NS_REFINED_FOR_SWIFT API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
@@ -151,7 +151,7 @@ XCodeコマンドラインツールの再インストールが引き続き失敗
 
 `/Applications/Xcode.app/Contents/Developer`と表示された場合、`sudo xcode-select --switch /Library/Developer/CommandLineTools`というコマンドを実行してください。
 
-出典: https://github.com/wailsapp/wails/issues/1806 および https://github.com/wailsapp/wails/issues/1140#issuecomment-1290446496
+出典: https://github.com/cllsm/wails-win7/issues/1806 および https://github.com/cllsm/wails-win7/issues/1140#issuecomment-1290446496
 
 --
 

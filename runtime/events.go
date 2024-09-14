@@ -1,6 +1,6 @@
 package runtime
 
-import "github.com/wailsapp/wails/lib/interfaces"
+import "github.com/cllsm/wails-win7/lib/interfaces"
 
 // Events exposes the events interface
 type Events struct {

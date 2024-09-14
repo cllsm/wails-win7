@@ -10,8 +10,8 @@ Add the plugin to the `Plugins` option in the Applications options:
 package main
 
 import (
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/plugins/kvstore"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/plugins/kvstore"
 )
 
 func main() {
@@ -63,4 +63,4 @@ You can call the methods from the frontend using the Plugin method:
 
 ## Support
 
-If you find a bug in this plugin, please raise a ticket on the Wails [Issue Tracker](https://github.com/wailsapp/wails/issues). 
+If you find a bug in this plugin, please raise a ticket on the Wails [Issue Tracker](https://github.com/cllsm/wails-win7/issues). 

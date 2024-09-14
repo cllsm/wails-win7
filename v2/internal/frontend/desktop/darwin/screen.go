@@ -54,7 +54,7 @@ Screen GetNthScreen(int nth, void *inctx){
 */
 import "C"
 import (
-	"github.com/wailsapp/wails/v2/internal/frontend"
+	"github.com/cllsm/wails-win7/v2/internal/frontend"
 	"unsafe"
 )
 

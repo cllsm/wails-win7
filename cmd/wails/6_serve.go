@@ -5,7 +5,7 @@ import (
 	"runtime"
 
 	"github.com/leaanthony/spinner"
-	"github.com/wailsapp/wails/cmd"
+	"github.com/cllsm/wails-win7/cmd"
 )
 
 func init() {

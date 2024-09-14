@@ -128,8 +128,8 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/pkg/assetserver/webview"
-	"github.com/wailsapp/wails/v3/pkg/events"
+	"github.com/cllsm/wails-win7/v2/pkg/assetserver/webview"
+	"github.com/cllsm/wails-win7/v3/pkg/events"
 )
 
 type macosApp struct {

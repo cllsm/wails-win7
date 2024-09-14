@@ -4,8 +4,8 @@ import (
 	_ "embed"
 	"log"
 
-	"github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services"
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/internal/parser/testdata/struct_literal_multiple_other/services"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
 )
 
 // GreetService is great

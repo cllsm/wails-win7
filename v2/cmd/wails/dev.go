@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/pterm/pterm"
-	"github.com/wailsapp/wails/v2/cmd/wails/flags"
-	"github.com/wailsapp/wails/v2/cmd/wails/internal/dev"
-	"github.com/wailsapp/wails/v2/internal/colour"
-	"github.com/wailsapp/wails/v2/pkg/clilogger"
+	"github.com/cllsm/wails-win7/v2/cmd/wails/flags"
+	"github.com/cllsm/wails-win7/v2/cmd/wails/internal/dev"
+	"github.com/cllsm/wails-win7/v2/internal/colour"
+	"github.com/cllsm/wails-win7/v2/pkg/clilogger"
 	"os"
 )
 

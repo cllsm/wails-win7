@@ -1,7 +1,7 @@
 package start_at_login
 
 import (
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
 )
 
 type Plugin struct {
@@ -20,7 +20,7 @@ func (p *Plugin) Shutdown() {}
 // Name returns the name of the plugin.
 // You should use the go module format e.g. github.com/myuser/myplugin
 func (p *Plugin) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/start_at_login"
+	return "github.com/cllsm/wails-win7/v3/plugins/start_at_login"
 }
 
 func (p *Plugin) Init(app *application.App) error {

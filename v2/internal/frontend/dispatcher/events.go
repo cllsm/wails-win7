@@ -3,7 +3,7 @@ package dispatcher
 import (
 	"encoding/json"
 	"errors"
-	"github.com/wailsapp/wails/v2/internal/frontend"
+	"github.com/cllsm/wails-win7/v2/internal/frontend"
 )
 
 type EventMessage struct {

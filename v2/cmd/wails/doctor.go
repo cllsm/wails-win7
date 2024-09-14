@@ -6,10 +6,10 @@ import (
 	"strings"
 
 	"github.com/pterm/pterm"
-	"github.com/wailsapp/wails/v2/cmd/wails/flags"
-	"github.com/wailsapp/wails/v2/internal/colour"
-	"github.com/wailsapp/wails/v2/internal/system"
-	"github.com/wailsapp/wails/v2/internal/system/packagemanager"
+	"github.com/cllsm/wails-win7/v2/cmd/wails/flags"
+	"github.com/cllsm/wails-win7/v2/internal/colour"
+	"github.com/cllsm/wails-win7/v2/internal/system"
+	"github.com/cllsm/wails-win7/v2/internal/system/packagemanager"
 )
 
 func diagnoseEnvironment(f *flags.Doctor) error {

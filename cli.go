@@ -1,7 +1,7 @@
 package wails
 
 import (
-	"github.com/wailsapp/wails/cmd"
+	"github.com/cllsm/wails-win7/cmd"
 )
 
 // setupCli creates a new cli handler for the application

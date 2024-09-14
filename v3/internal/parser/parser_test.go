@@ -1055,7 +1055,7 @@ func TestParseDirectory(t *testing.T) {
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
+				"github.com/cllsm/wails-win7/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
 					"OtherService": {
 						{
 							Name: "Yay",
@@ -1065,7 +1065,7 @@ func TestParseDirectory(t *testing.T) {
 										Name:      "Address",
 										IsStruct:  true,
 										IsPointer: true,
-										Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+										Package:   "github.com/cllsm/wails-win7/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 									},
 								},
 							},
@@ -1090,13 +1090,13 @@ func TestParseDirectory(t *testing.T) {
 									Name:      "Address",
 									IsStruct:  true,
 									IsPointer: true,
-									Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+									Package:   "github.com/cllsm/wails-win7/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 								},
 							},
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
+				"github.com/cllsm/wails-win7/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
 					"Address": {
 						Name: "Address",
 						Fields: []*Field{
@@ -1237,7 +1237,7 @@ func TestParseDirectory(t *testing.T) {
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
+				"github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services": {
 					"OtherService": {
 						{
 							Name: "Yay",
@@ -1247,7 +1247,7 @@ func TestParseDirectory(t *testing.T) {
 										Name:      "Address",
 										IsStruct:  true,
 										IsPointer: true,
-										Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+										Package:   "github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services",
 									},
 								},
 							},
@@ -1272,13 +1272,13 @@ func TestParseDirectory(t *testing.T) {
 									Name:      "Address",
 									IsStruct:  true,
 									IsPointer: true,
-									Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+									Package:   "github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services",
 								},
 							},
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
+				"github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services": {
 					"Address": {
 						Name: "Address",
 						Fields: []*Field{
@@ -1388,7 +1388,7 @@ func TestParseDirectory(t *testing.T) {
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
+				"github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services": {
 					"OtherService": {
 						{
 							Name: "Yay",
@@ -1398,7 +1398,7 @@ func TestParseDirectory(t *testing.T) {
 										Name:      "Address",
 										IsStruct:  true,
 										IsPointer: true,
-										Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+										Package:   "github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services",
 									},
 								},
 							},
@@ -1423,13 +1423,13 @@ func TestParseDirectory(t *testing.T) {
 									Name:      "Address",
 									IsStruct:  true,
 									IsPointer: true,
-									Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+									Package:   "github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services",
 								},
 							},
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
+				"github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services": {
 					"Address": {
 						Name: "Address",
 						Fields: []*Field{

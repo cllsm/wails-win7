@@ -86,13 +86,13 @@ module.exports = async function configCreatorAsync() {
           docs: {
             sidebarPath: require.resolve("./sidebars.js"),
             // Please change this to your repo.
-            editUrl: "https://github.com/wailsapp/wails/edit/master/website",
+            editUrl: "https://github.com/cllsm/wails-win7/edit/master/website",
           },
           blog: {
             showReadingTime: true,
             // Please change this to your repo.
             editUrl:
-              "https://github.com/wailsapp/wails/edit/master/website/blog",
+              "https://github.com/cllsm/wails-win7/edit/master/website/blog",
           },
           theme: {
             customCss: [
@@ -175,7 +175,7 @@ module.exports = async function configCreatorAsync() {
               ],
             },
             {
-              href: "https://github.com/wailsapp/wails",
+              href: "https://github.com/cllsm/wails-win7",
               label: "GitHub",
               position: "right",
             },
@@ -191,7 +191,7 @@ module.exports = async function configCreatorAsync() {
             alt: "Wails Logo",
             src: "img/wails-logo-horizontal.svg",
             srcDark: "img/wails-logo-horizontal-dark.svg",
-            href: "https://github.com/wailsapp/wails",
+            href: "https://github.com/cllsm/wails-win7",
             width: 160,
             height: 50,
           },
@@ -218,7 +218,7 @@ module.exports = async function configCreatorAsync() {
               items: [
                 {
                   label: "Github",
-                  href: "https://github.com/wailsapp/wails",
+                  href: "https://github.com/cllsm/wails-win7",
                 },
                 {
                   label: "Twitter",

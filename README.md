@@ -6,16 +6,16 @@
   Build desktop applications using Go & Web Technologies.
   <br/>
   <br/>
-  <a href="https://github.com/wailsapp/wails/blob/master/LICENSE">
+  <a href="https://github.com/cllsm/wails-win7/blob/master/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/wailsapp/wails"/>
   </a>
-  <a href="https://goreportcard.com/report/github.com/wailsapp/wails">
-    <img src="https://goreportcard.com/badge/github.com/wailsapp/wails" />
+  <a href="https://goreportcard.com/report/github.com/cllsm/wails-win7">
+    <img src="https://goreportcard.com/badge/github.com/cllsm/wails-win7" />
   </a>
-  <a href="https://pkg.go.dev/github.com/wailsapp/wails">
-    <img src="https://pkg.go.dev/badge/github.com/wailsapp/wails.svg" alt="Go Reference"/>
+  <a href="https://pkg.go.dev/github.com/cllsm/wails-win7">
+    <img src="https://pkg.go.dev/badge/github.com/cllsm/wails-win7.svg" alt="Go Reference"/>
   </a>
-  <a href="https://github.com/wailsapp/wails/issues">
+  <a href="https://github.com/cllsm/wails-win7/issues">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="CodeFactor" />
   </a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fwailsapp%2Fwails?ref=badge_shield" alt="FOSSA Status">
@@ -28,10 +28,10 @@
     <img alt="Slack" src="https://img.shields.io/badge/slack-gophers%2Fwails%20-blue?logo=slack"/>
   </a>
   <br/>
-  <a href="https://github.com/wailsapp/wails/actions/workflows/build-and-test.yml" rel="nofollow">
+  <a href="https://github.com/cllsm/wails-win7/actions/workflows/build-and-test.yml" rel="nofollow">
     <img src="https://img.shields.io/github/actions/workflow/status/wailsapp/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
   </a>
-  <a href="https://github.com/wailsapp/wails/tags" rel="nofollow">
+  <a href="https://github.com/cllsm/wails-win7/tags" rel="nofollow">
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/wailsapp/wails?include_prereleases&label=version"/>
   </a>
 </p>
@@ -82,7 +82,7 @@ make this easy for you by handling project creation, compilation and bundling. A
 
 ### Roadmap
 
-The project roadmap may be found [here](https://github.com/wailsapp/wails/discussions/1484). Please consult
+The project roadmap may be found [here](https://github.com/cllsm/wails-win7/discussions/1484). Please consult
 this before open up an enhancement request.
 
 ## Getting Started

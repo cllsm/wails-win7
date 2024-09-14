@@ -8,16 +8,16 @@
   Go & Web 기술을 사용하여 데스크탑 애플리케이션을 빌드하세요.
   <br/>
   <br/>
-  <a href="https://github.com/wailsapp/wails/blob/master/LICENSE">
+  <a href="https://github.com/cllsm/wails-win7/blob/master/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/wailsapp/wails"/>
   </a>
-  <a href="https://goreportcard.com/report/github.com/wailsapp/wails">
-    <img src="https://goreportcard.com/badge/github.com/wailsapp/wails" />
+  <a href="https://goreportcard.com/report/github.com/cllsm/wails-win7">
+    <img src="https://goreportcard.com/badge/github.com/cllsm/wails-win7" />
   </a>
-  <a href="https://pkg.go.dev/github.com/wailsapp/wails">
-    <img src="https://pkg.go.dev/badge/github.com/wailsapp/wails.svg" alt="Go Reference"/>
+  <a href="https://pkg.go.dev/github.com/cllsm/wails-win7">
+    <img src="https://pkg.go.dev/badge/github.com/cllsm/wails-win7.svg" alt="Go Reference"/>
   </a>
-  <a href="https://github.com/wailsapp/wails/issues">
+  <a href="https://github.com/cllsm/wails-win7/issues">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="CodeFactor" />
   </a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fwailsapp%2Fwails?ref=badge_shield" alt="FOSSA Status">
@@ -30,10 +30,10 @@
     <img alt="Slack" src="https://img.shields.io/badge/slack-gophers%2Fwails%20-blue?logo=slack"/>
   </a>
   <br/>
-  <a href="https://github.com/wailsapp/wails/actions/workflows/build-and-test.yml" rel="nofollow">
+  <a href="https://github.com/cllsm/wails-win7/actions/workflows/build-and-test.yml" rel="nofollow">
     <img src="https://img.shields.io/github/actions/workflow/status/wailsapp/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
   </a>
-  <a href="https://github.com/wailsapp/wails/tags" rel="nofollow">
+  <a href="https://github.com/cllsm/wails-win7/tags" rel="nofollow">
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/wailsapp/wails?include_prereleases&label=version"/>
   </a>
 </p>
@@ -85,7 +85,7 @@ Wails는 다르게 접근합니다: Go 코드와 웹 프론트엔드를 단일 �
 
 ### 로드맵
 
-프로젝트 로드맵은 [여기](https://github.com/wailsapp/wails/discussions/1484)에서 
+프로젝트 로드맵은 [여기](https://github.com/cllsm/wails-win7/discussions/1484)에서 
 확인할 수 있습니다. 개선 요청을 하기 전에 이것을 참조하십시오.
 
 ## 시작하기

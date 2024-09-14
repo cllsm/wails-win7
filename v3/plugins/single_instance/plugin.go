@@ -2,7 +2,7 @@ package single_instance
 
 import (
 	"fmt"
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
 	"os"
 	"path/filepath"
 )
@@ -49,7 +49,7 @@ func (p *Plugin) Shutdown() {
 
 // Name returns the name of the plugin.
 func (p *Plugin) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/single-instance"
+	return "github.com/cllsm/wails-win7/v3/plugins/single-instance"
 }
 
 // Init is called when the app is starting up. You can use this to

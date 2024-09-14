@@ -6,7 +6,7 @@ import (
 	"github.com/pterm/pterm"
 
 	"github.com/leaanthony/clir"
-	"github.com/wailsapp/wails/v3/internal/commands"
+	"github.com/cllsm/wails-win7/v3/internal/commands"
 )
 
 func main() {

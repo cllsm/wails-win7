@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/leaanthony/slicer"
-	"github.com/wailsapp/wails/v2/internal/system"
-	"github.com/wailsapp/wails/v2/pkg/commands/build"
-	"github.com/wailsapp/wails/v2/pkg/commands/buildtags"
+	"github.com/cllsm/wails-win7/v2/internal/system"
+	"github.com/cllsm/wails-win7/v2/pkg/commands/build"
+	"github.com/cllsm/wails-win7/v2/pkg/commands/buildtags"
 )
 
 const (

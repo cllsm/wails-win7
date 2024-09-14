@@ -5,7 +5,7 @@ import (
 
 	"github.com/pterm/pterm"
 
-	"github.com/wailsapp/wails/v3/internal/flags"
+	"github.com/cllsm/wails-win7/v3/internal/flags"
 )
 
 func Build(_ *flags.Build) error {

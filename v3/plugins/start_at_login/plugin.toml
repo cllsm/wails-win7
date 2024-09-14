@@ -5,7 +5,7 @@ Description = "Plugin to control whether the application should start at login"
 Author = "Lea Anthony"
 Version = "v1.0.0"
 Website = "https://wails.io/plugins/start_at_login"
-Repository = "https://github.com/wailsapp/wails/v3/plugins/start_at_login"
+Repository = "https://github.com/cllsm/wails-win7/v3/plugins/start_at_login"
 License = "MIT"
 
 

@@ -3,11 +3,11 @@ package templates
 import (
 	"embed"
 	"fmt"
-	"github.com/wailsapp/wails/v3/internal/debug"
+	"github.com/cllsm/wails-win7/v3/internal/debug"
 	"io/fs"
 	"os"
 
-	"github.com/wailsapp/wails/v3/internal/flags"
+	"github.com/cllsm/wails-win7/v3/internal/flags"
 
 	"github.com/leaanthony/gosod"
 

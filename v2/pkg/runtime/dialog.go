@@ -3,8 +3,8 @@ package runtime
 import (
 	"context"
 	"fmt"
-	"github.com/wailsapp/wails/v2/internal/frontend"
-	"github.com/wailsapp/wails/v2/internal/fs"
+	"github.com/cllsm/wails-win7/v2/internal/frontend"
+	"github.com/cllsm/wails-win7/v2/internal/fs"
 )
 
 // FileFilter defines a filter for dialog boxes

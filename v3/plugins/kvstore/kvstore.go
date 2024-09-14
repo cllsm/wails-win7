@@ -6,8 +6,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/logger"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/pkg/logger"
 )
 
 type KeyValueStore struct {
@@ -49,7 +49,7 @@ func (kvs *KeyValueStore) Shutdown() {
 
 // Name returns the name of the plugin.
 func (kvs *KeyValueStore) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/kvstore"
+	return "github.com/cllsm/wails-win7/v3/plugins/kvstore"
 }
 
 // Init is called when the plugin is loaded. It is passed the application.App

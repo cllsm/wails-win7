@@ -4,7 +4,7 @@ import (
 	"io/fs"
 	"net/http"
 
-	"github.com/wailsapp/wails/v3/pkg/logger"
+	"github.com/cllsm/wails-win7/v3/pkg/logger"
 )
 
 type Options struct {

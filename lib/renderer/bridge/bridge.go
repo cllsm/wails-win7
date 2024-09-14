@@ -7,9 +7,9 @@ import (
 	"sync"
 
 	"github.com/gorilla/websocket"
-	"github.com/wailsapp/wails/lib/interfaces"
-	"github.com/wailsapp/wails/lib/logger"
-	"github.com/wailsapp/wails/lib/messages"
+	"github.com/cllsm/wails-win7/lib/interfaces"
+	"github.com/cllsm/wails-win7/lib/logger"
+	"github.com/cllsm/wails-win7/lib/messages"
 )
 
 type messageType int

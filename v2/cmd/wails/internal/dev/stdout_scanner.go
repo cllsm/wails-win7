@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/acarl005/stripansi"
-	"github.com/wailsapp/wails/v2/cmd/wails/internal/logutils"
+	"github.com/cllsm/wails-win7/v2/cmd/wails/internal/logutils"
 	"golang.org/x/mod/semver"
 )
 

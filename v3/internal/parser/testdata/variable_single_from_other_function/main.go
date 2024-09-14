@@ -2,10 +2,10 @@ package main
 
 import (
 	_ "embed"
-	"github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services"
+	"github.com/cllsm/wails-win7/v3/internal/parser/testdata/variable_single_from_other_function/services"
 	"log"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
 )
 
 // GreetService is great

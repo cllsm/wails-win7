@@ -1,6 +1,6 @@
 package ipc
 
-import "github.com/wailsapp/wails/lib/messages"
+import "github.com/cllsm/wails-win7/lib/messages"
 
 // Register the message handler
 func init() {

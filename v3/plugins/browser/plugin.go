@@ -2,7 +2,7 @@ package browser
 
 import (
 	"github.com/pkg/browser"
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
 )
 
 // ---------------- Plugin Setup ----------------
@@ -19,7 +19,7 @@ func NewPlugin() *Plugin {
 func (p *Plugin) Shutdown() {}
 
 func (p *Plugin) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/browser"
+	return "github.com/cllsm/wails-win7/v3/plugins/browser"
 }
 
 func (p *Plugin) Init(_ *application.App) error {

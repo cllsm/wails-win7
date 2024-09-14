@@ -2,13 +2,13 @@ package main
 
 import (
 	"embed"
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/plugins/browser"
-	"github.com/wailsapp/wails/v3/plugins/kvstore"
-	"github.com/wailsapp/wails/v3/plugins/log"
-	"github.com/wailsapp/wails/v3/plugins/single_instance"
-	"github.com/wailsapp/wails/v3/plugins/sqlite"
-	"github.com/wailsapp/wails/v3/plugins/start_at_login"
+	"github.com/cllsm/wails-win7/v3/pkg/application"
+	"github.com/cllsm/wails-win7/v3/plugins/browser"
+	"github.com/cllsm/wails-win7/v3/plugins/kvstore"
+	"github.com/cllsm/wails-win7/v3/plugins/log"
+	"github.com/cllsm/wails-win7/v3/plugins/single_instance"
+	"github.com/cllsm/wails-win7/v3/plugins/sqlite"
+	"github.com/cllsm/wails-win7/v3/plugins/start_at_login"
 	"os"
 	"plugin_demo/plugins/hashes"
 )
