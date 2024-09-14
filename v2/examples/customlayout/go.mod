@@ -30,4 +30,4 @@ require (
 	golang.org/x/text v0.7.0 // indirect
 )
 
-replace github.com/wailsapp/wails/v2 v2.1.0 => ../..
+replace github.com/cllsm/wails-win7/v2 v2.1.0 => ../..
