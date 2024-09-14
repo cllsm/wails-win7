@@ -1,4 +1,4 @@
-module github.com/wailsapp/wails
+module github.com/cllsm/wails-win7
 
 require (
 	github.com/Masterminds/semver v1.4.2
